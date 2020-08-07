@@ -25,20 +25,37 @@ entry: ['@babel/polyfill', './Src/js/app.js'],
   },
 
   plugins:[
-      
-      new HtmlWebpackPlugin(),
-      new HtmlWebpackPlugin({
-          template:'./Src/views/index.pug',
-          filename:'index.html'
-      }),
-      new HtmlWebpackPlugin({
-          template:'./Src/views/user.pug',
-      }),
 
-      new HtmlWebpackPlugin({
-        template:'./Src/views/profile.pug',
-        filename:'./views/profile.html'
-      })
+    new HtmlWebpackPlugin(),
+    
+    
+    
+    new HtmlWebpackPlugin({
+        template:'./Src/views/about.pug',
+        filename:'about.html'
+    }),
+
+    new HtmlWebpackPlugin({
+        template:'./Src/views/contact.pug',
+        filename:'contact.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template:'./Src/views/templates/header.pug',
+    }),
+  
+    new HtmlWebpackPlugin({
+    template:'./Src/views/templates/footer.pug',
+    }),
+
+    new HtmlWebpackPlugin({
+      template:'./Src/views/templates/base.pug',
+    }),
+
+    new HtmlWebpackPlugin({
+      template:'./Src/views/templates/index.pug',
+      filename:'index.html'
+}),
 
   ]
 
